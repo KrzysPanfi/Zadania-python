@@ -83,7 +83,7 @@ if liczbazad == 4:
     for i in range(6):
         a = random.randint(1, 49)
         listalos.append(a)
-    print("lista wylosowanych" + str(listalos))
+    #print("lista wylosowanych" + str(listalos))
     for i in range(6):
         a = int(input("Podaj cyfrę 1-49"))
         if a > 0 and a < 50:
@@ -153,7 +153,11 @@ if liczbazad == 7:
 # Wyświetl wynik.
 
 # Tu wpisz swój kod
-
+if liczbazad == 8:
+    imiona = ('Jakub', 'Bartosz', 'Max', 'Filip')
+    listaimiona = list(imiona)
+    listaimiona.sort()
+    print(listaimiona)
 
 # ------------------------------
 # Zadanie 9 – Suma elementów krotki
@@ -162,7 +166,10 @@ if liczbazad == 7:
 # Oblicz sumę wszystkich elementów krotki i wyświetl wynik.
 
 # Tu wpisz swój kod
-
+if liczbazad == 9:
+    krotka = (1, 2, 3, 4, 5)
+    suma = sum(list(krotka))
+    print(suma)
 
 # ------------------------------
 # Zadanie 10 – Kieszeń (krotki)
@@ -174,11 +181,29 @@ if liczbazad == 7:
 # Umieść wszystkie elementy i dwa dodatkowe w większej kieszonce i wyświetl wynik.
 
 # Tu wpisz swój kod
-
-
+if liczbazad == 10:
+    pocket = ('pen', 'pencil', 'keys')
+    if 'keys' in pocket:
+        print("są klucze")
+    print("liczba przedmiotów " + str(len(pocket)) + " " + str(pocket[-1]) + " " + str(pocket[-2]))
+    add = ('coins',)
+    pocket = pocket + add
+    add1 = ('wallet', 'phone')
+    biggerpocket = pocket + add1
+    print("Bigger pocket "+ str(biggerpocket))
 # ------------------------------
 # Zadanie 11 – Porównanie dwóch list
 # ------------------------------
 # Stwórz dwie listy 'a' i 'b', każda po 3 liczby.
 # Porównaj elementy list: sprawdź, czy elementy listy 'a' są większe od odpowiadających elementów listy 'b'.
 # Wyniki zapisz w nowej liście 'greater' i wyświetl ją.
+if liczbazad == 11:
+    lista = [16, 2, 37]
+    listb = [1, 3, 6]
+    greater = list()
+    for i in range(len(lista)):
+        if lista[i] > listb[i]:
+            greater.append(True)
+        else:
+            greater.append(False)
+    print(greater)
